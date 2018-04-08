@@ -1,0 +1,15 @@
+--require spec_helper
+
+require "rubygems"
+require "selenium-webdriver"
+=begin
+config.before(:each) do
+@driver=Selenium::WebDriver.for :firefox
+@driver.get "http://paynearme.com/en/"
+
+end
+config.after(:each) do
+@driver.quit
+end
+=end
+
