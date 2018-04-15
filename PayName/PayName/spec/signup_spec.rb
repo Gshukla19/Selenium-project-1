@@ -1,22 +1,17 @@
 require 'rspec'
 include WaitHelper
+include GenericHelper
+include LoginHelper
+include SignupHelper
+
 describe 'signup: ' do
 
   it ' should allow users to signup' do
-    #step 1
-    wait_true(15){@driver.find_element(:id,"input-email_or_phone").displayed?}
-    @driver.find_element(:id, "input-email_or_phone").send_keys("test21@gmail.com")
+   signup ("xyz@gmail.ca")#,"1qaz@wsx",95035)
 
-    #step 2
-    wait_true(15){@driver.find_element(:id,"input-password").displayed?}
-    @driver.find_element(:id, "input-password").send_keys("1qaz@WSX")
+   navigate_to_login
+   login(abc@gmail.ca, zalditha)
 
-    #step 3
-    wait_true(15){@driver.find_element(:id,"input-postalcode").displayed?}
-    @driver.find_element(:id, "input-postalcode").send_keys("95035")
-
-    #step 4
-    @driver.find_element(:id, "button-sign-up").click
 
     sleep 10
   end
@@ -67,6 +62,17 @@ describe 'signup: ' do
 
 
     sleep 10
+
+  end
+  it "deskboard" do
+
+
+
+  end
+  it "addBiller" do
+
+
+
 
   end
 end
